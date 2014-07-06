@@ -1,0 +1,39 @@
+interface: eth0.2  # eth0.2 - default wan interface in OpenWrt
+
+speed_test_length: 1  # Seconds
+hold_high_speed_time: 3  # Minutes
+speed_increase_step: 1 # Default - 1. Minimal - 1
+
+use_ssh: true  # If false - use local interface
+ssh_config: {
+  host: 192.168.1.1,
+  port: 22,
+  login: root
+}
+
+yota_credentials: {
+  login: login@example.com,
+  password: qweasdrty
+}
+
+pb_enabled: false  # Is pushbullet notifications enabled
+pb_api: QdIpbFaL0MLk0zimWPgYKCDnNXg2R7LMheVro0TC  # api key from www.pushbullet.com/account
+pb_devices: [  # list of devices identificators. Only your devices supported
+  KjAD37RAGhcCiWB81eJSJp, 
+  ihCfLH0hsWnhbxG4pTBV7d
+]
+
+modes: {  # current speed: tariff
+  0: 320,
+  290: 512,
+  495: 768,
+  700: 1.0,
+  900: 2.1,
+  1900: 3.1,
+  2900: 4.1,
+  3900: 6.5,
+  6500: 8.0,
+  8000: 10.0,
+  10000: 15.0,
+  14800: 20.0  # 20.0 = maximal speed in selfcare
+}

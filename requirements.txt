@@ -1,0 +1,4 @@
+PyYAML==3.11
+pyaml==14.05.7
+sh==1.09
+requests==2.3.0
